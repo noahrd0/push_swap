@@ -23,7 +23,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	j = -1;
 	destl = 0;
 	while (++i < size && dest[i])
-		 destl++;
+		destl++;
 	if (i == size)
 		return (i + (unsigned int)ft_strlen(src));
 	while (src[++j])

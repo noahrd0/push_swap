@@ -17,28 +17,28 @@
 # include "../libft/includes/libft.h"
 
 /* parsing */
-void pars_error(int *array, int *array_cpy);
-void pars_no_duplicates(int *array, int *array_cpy, int array_size);
-void pars_sorted(int *array, int *array_cpy, int array_size);
-int pars_atoi(char *str, int *array, int *array_cpy);
-int pars_correct_arg(char *str, int *array, int *array_cpy);
+void	pars_error(int *array, int *array_cpy);
+void	pars_no_duplicates(int *array, int *array_cpy, int array_size);
+void	pars_sorted(int *array, int *array_cpy, int array_size);
+int		pars_atoi(char *str, int *array, int *array_cpy);
+int		pars_correct_arg(char *str, int *array, int *array_cpy);
 
 /* array management */
-void initalize_array(int *array, int *array_cpy, int array_size, char **av);
-void bubble_sort(int *array, int array_size);
-void simplify_array(int *array, int *array_cpy, int array_size);
-void binary_array(int *array, int array_size);
-int decimal_to_binary(int n);
+void	initalize_array(int *array, int *array_cpy, int array_size, char **av);
+void	bubble_sort(int *array, int array_size);
+void	simplify_array(int *array, int *array_cpy, int array_size);
+void	binary_array(int *array, int array_size);
+int		decimal_to_binary(int n);
 
 /* sorting */
-void pa_less5(int *arrayB, int toB);
-void sort_less3(int *arrayA);
-void sort_less5(int *arrayA, int *arrayB, int array_size);
-void sort(int *arrayA, int *arrayB, int array_size);
-int array_is_sorted(int *arrayA, int array_size);
+void	pa_less5(int *arrayB, int toB);
+void	sort_less3(int *arrayA);
+void	sort_less5(int *arrayA, int *arrayB, int array_size);
+void	sort(int *arrayA, int *arrayB, int array_size);
+int		array_is_sorted(int *arrayA, int array_size);
 
 /* operations */
-void pb(int *arrayA, int *arrayB, int j);
-void divide(int *arrayA, int array_size);
+void	pb(int *arrayA, int *arrayB, int j);
+void	divide(int *arrayA, int array_size);
 
 #endif

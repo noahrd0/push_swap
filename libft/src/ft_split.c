@@ -12,10 +12,10 @@
 
 #include "../includes/libft.h"
 
-int	    ft_nbr_str(const char *str, char c)
+int	ft_nbr_str(const char *str, char c)
 {
-	int i;
-	int b;
+	int	i;
+	int	b;
 
 	i = 0;
 	b = 0;
@@ -33,7 +33,7 @@ int	    ft_nbr_str(const char *str, char c)
 	return (i);
 }
 
-char    *ft_dup_str(const char *str, int start, int finish)
+char	*ft_dup_str(const char *str, int start, int finish)
 {
 	char	*word;
 	int		i;
@@ -53,7 +53,8 @@ char	**ft_split(char const *s, char c)
 	int		index;
 	char	**split;
 
-	if (!s || !(split = malloc((ft_nbr_str(s, c) + 1) * sizeof(char *))))
+	split = malloc((ft_nbr_str(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
 		return (0);
 	i = 0;
 	j = 0;
