@@ -31,7 +31,7 @@ void	binary_array(int *array, int array_size);
 int		decimal_to_binary(int n);
 
 /* sorting */
-void	pa_less5(int *arrayB, int toB);
+void	push_to_a(int *arrayB, int to_b);
 void	sort_less3(int *arrayA);
 void	sort_less5(int *arrayA, int *arrayB, int array_size);
 void	sort(int *arrayA, int *arrayB, int array_size);

@@ -43,7 +43,7 @@ int	pars_atoi(char *str, int *array, int *array_cpy)
 		i++;
 	}
 	nbr *= negative;
-	if (nbr <= -2147483648 && nbr >= 2147483647)
+	if (nbr <= -2147483648 || nbr >= 2147483647)
 		pars_error(array, array_cpy);
 	return (nbr);
 }
@@ -57,7 +57,9 @@ int	pars_correct_arg(char *str, int *array, int *array_cpy)
 	{
 		if (ft_isdigit(str[i]) || (str[i] == ' ') || (str[i] == '-'))
 		{
-			if (str[i] == '-' && !ft_isdigit(str[i + 1]))
+			if (str[i] == '-' && (!ft_isdigit(str[i + 1])))
+				pars_error(array, array_cpy);
+			if (i != 0 && str[i] == '-' && str[i - 1] != ' ')
 				pars_error(array, array_cpy);
 			i++;
 		}
