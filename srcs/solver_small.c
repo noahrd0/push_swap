@@ -62,19 +62,13 @@ void	organize_array_a(int *arrayA, int *array_cpy, int array_size, int to_b)
 	}
 }
 
-void	sort_less5(int *arrayA, int *arrayB, int array_size)
+void	print_pb_ra(int *arrayA, int *arrayB, int array_size, int to_b)
 {
-	int	to_b;
-	int	*array_cpy;
 	int	i;
 	int	pos;
 
 	i = 0;
 	pos = 0;
-	array_cpy = malloc(array_size * sizeof(array_cpy));
-	if (!array_cpy)
-		exit(1);
-	to_b = array_size - 3;
 	while (i < array_size)
 	{
 		if (arrayA[i] == 0 || (to_b == 2 && arrayA[i] == 1))
@@ -86,6 +80,18 @@ void	sort_less5(int *arrayA, int *arrayB, int array_size)
 			ft_putstr_fd("ra\n", 1);
 		i++;
 	}
+}
+
+void	sort_less5(int *arrayA, int *arrayB, int array_size)
+{
+	int	to_b;
+	int	*array_cpy;
+
+	array_cpy = malloc(array_size * sizeof(array_cpy));
+	if (!array_cpy)
+		exit(1);
+	to_b = array_size - 3;
+	print_pb_ra(arrayA, arrayB, array_size, to_b);
 	organize_array_a(arrayA, array_cpy, array_size, to_b);
 	bubble_sort(array_cpy, 3);
 	simplify_array(arrayA, array_cpy, 3);
